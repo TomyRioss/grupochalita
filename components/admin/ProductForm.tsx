@@ -114,7 +114,7 @@ export default function ProductForm({ categories, product, variants }: Props) {
     setError(null)
     try {
       const urls = await uploadFiles(files)
-      setMainImage(urls[0])
+      setMainImage(urls[0] ?? null)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error subiendo imagen')
     } finally {

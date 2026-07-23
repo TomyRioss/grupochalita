@@ -7,16 +7,21 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
-  const body = await req.json()
+  const body: {
+    name?: string
+    description?: string | null
+    images?: string[]
+    active?: boolean
+  } = await req.json()
   const { name, description, images, active } = body
 
   const variant = await prisma.productVariant.update({
     where: { id },
     data: {
-      name,
-      description,
-      images: Array.isArray(images) ? images : undefined,
-      active,
+      ...(name !== undefined && { name }),
+      ...(description !== undefined && { description }),
+      ...(Array.isArray(images) && { images }),
+      ...(active !== undefined && { active }),
     },
   })
   return NextResponse.json(variant)

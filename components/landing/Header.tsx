@@ -6,7 +6,7 @@ import { Menu, X, ShoppingBag } from 'lucide-react'
 import { useWeddingCart } from '@/lib/contexts/WeddingCartContext'
 
 const navItems = [
-  { label: 'Catálogo', href: '/propiedades' },
+  { label: 'Catálogo', href: '/catalogo' },
   { label: 'Toldos', href: '/toldos' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Locaciones', href: '#locaciones' },

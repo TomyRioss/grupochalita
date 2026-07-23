@@ -7,7 +7,17 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
-  const body = await req.json()
+  const body: {
+    name?: string
+    slug?: string
+    description?: string | null
+    categoryId?: string
+    subcategoryId?: string | null
+    active?: boolean
+    featured?: boolean
+    mainImage?: string | null
+    images?: string[]
+  } = await req.json()
   const { name, slug, description, categoryId, subcategoryId, active, featured, mainImage, images } = body
 
   if (slug) {
@@ -18,15 +28,15 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   const product = await prisma.product.update({
     where: { id },
     data: {
-      name,
-      slug,
-      description,
-      categoryId,
-      subcategoryId: subcategoryId || null,
-      active,
-      featured,
-      mainImage: mainImage !== undefined ? (mainImage || null) : undefined,
-      images: Array.isArray(images) ? images : undefined,
+      ...(name !== undefined && { name }),
+      ...(slug !== undefined && { slug }),
+      ...(description !== undefined && { description }),
+      ...(categoryId !== undefined && { categoryId }),
+      ...(subcategoryId !== undefined && { subcategoryId: subcategoryId || null }),
+      ...(active !== undefined && { active }),
+      ...(featured !== undefined && { featured }),
+      ...(mainImage !== undefined && { mainImage: mainImage || null }),
+      ...(Array.isArray(images) && { images }),
     },
     include: { category: { select: { id: true, name: true } }, subcategory: { select: { id: true, name: true } } },
   })

@@ -67,7 +67,8 @@
       "mcp__playwright__browser_click",
       "mcp__playwright__browser_resize",
       "Bash(rm \"app/api/wedding/categories/route.ts\")",
-      "Bash(rmdir \"app/api/wedding/categories\")"
+      "Bash(rmdir \"app/api/wedding/categories\")",
+      "Bash(git check-ignore *)"
     ]
   }
 }

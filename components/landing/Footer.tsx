@@ -29,7 +29,7 @@ export default function Footer() {
               Grupo Chalita
             </div>
             <nav className="flex flex-col gap-3">
-              <Link href="/propiedades" className="text-muted-brand hover:text-accent transition-colors text-sm w-fit">
+              <Link href="/catalogo" className="text-muted-brand hover:text-accent transition-colors text-sm w-fit">
                 Catálogo
               </Link>
               <Link href="#servicios" className="text-muted-brand hover:text-accent transition-colors text-sm w-fit">

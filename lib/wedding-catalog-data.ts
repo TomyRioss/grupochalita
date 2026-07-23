@@ -6,10 +6,11 @@ export interface WeddingItem {
   imageUrl: string | null
   price: number
   unitLabel: string | null
-  subcategory?: string | null
+  subcategory: string | null
 }
 
 export interface WeddingCategory {
+  id: string
   slug: string
   name: string
   icon: string | null
@@ -45,6 +46,7 @@ type ProductForCatalog = {
 }
 
 type CategoryForCatalog = {
+  id: string
   slug: string
   name: string
   icon: string | null
@@ -53,6 +55,7 @@ type CategoryForCatalog = {
 
 export function toWeddingCategory(category: CategoryForCatalog): WeddingCategory {
   return {
+    id: category.id,
     slug: category.slug,
     name: category.name,
     icon: category.icon,

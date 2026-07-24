@@ -20,7 +20,7 @@ export default function Hero() {
           Exclusividad &amp; Romance
         </span>
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-text-brand mb-8 leading-none tracking-tight">
-          Grupo Chalita — Tu Boda, <br className="hidden md:block" /> Nuestra Obra Maestra
+          Grupo Chalita — Tu Evento, <br className="hidden md:block" /> Nuestra Obra Maestra
         </h1>
         <p className="text-base md:text-lg text-muted-brand mb-12 max-w-2xl mx-auto leading-relaxed">
           Transformamos sueños en realidades tangibles a través de un diseño meticuloso y una logística de precisión para eventos de clase mundial.
@@ -30,7 +30,7 @@ export default function Hero() {
             href="#contacto"
             className="bg-accent text-bg px-10 py-5 font-semibold text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all duration-300 rounded-full"
           >
-            Comenzar a Armar tu Boda
+            Comenzar a Armar tu Evento
           </a>
           <a
             href="#servicios"

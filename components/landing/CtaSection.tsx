@@ -10,7 +10,7 @@ export default function CtaSection() {
         rel="noopener noreferrer"
         className="inline-block bg-accent text-bg px-12 py-6 font-semibold text-xs uppercase tracking-[0.2em] hover:scale-105 active:scale-95 transition-all duration-300 rounded-full"
       >
-        Arma tu Boda
+        Arma tu Evento
       </a>
     </section>
   )

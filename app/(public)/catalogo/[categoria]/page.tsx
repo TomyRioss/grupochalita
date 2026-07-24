@@ -59,10 +59,10 @@ export default async function CategoriaPage({
             Catálogo
           </span>
           <h1 className="font-semibold text-3xl md:text-5xl text-[#F5EDD8] leading-tight">
-            Elegí los rubros para tu evento
+            Elige los rubros para tu evento
           </h1>
           <p className="text-sm md:text-base text-[#7A6845]">
-            Comenzá a añadir productos a tu boda: navegá los rubros de arriba y sumá lo que te guste a tu plan.
+            Comenzá a añadir productos a tu evento: navegá los rubros de arriba y sumá lo que te guste a tu plan.
           </p>
         </div>
 

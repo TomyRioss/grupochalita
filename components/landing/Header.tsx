@@ -42,7 +42,7 @@ export default function Header() {
             href="/wedding-plan"
             className="hidden lg:block bg-accent text-bg px-6 py-2.5 font-semibold text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all duration-300 rounded-full"
           >
-            Arma tu Boda
+            Arma tu Evento
           </Link>
           <button
             onClick={openCart}

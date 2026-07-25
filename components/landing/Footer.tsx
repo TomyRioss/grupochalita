@@ -3,7 +3,12 @@ import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaMapMarkerAlt, FaClock,
 
 const MAPS_URL = 'https://www.google.com/maps/search/Grupo%20Chalita/@20.74014623,-105.29225341,17z?hl=es'
 const MAPS_EMBED_URL = 'https://www.google.com/maps?q=20.74014623,-105.29225341&z=16&output=embed'
-const WHATSAPP_NUMBER = '523292965459'
+const whatsappContacts = [
+  { name: 'Anaid Chalita', phone: '5213221884300' },
+  { name: 'Anaid Logística (Chalita)', phone: '5213221884300' },
+  { name: 'Karina Chalita', phone: '5213314874370' },
+  { name: 'Oliver Xiutla', phone: '5213223235254' },
+]
 
 const emails = [
   'ventas@grupochalitabahia.com',
@@ -87,15 +92,25 @@ export default function Footer() {
                 <span>Sábado: 8:30 a 13:30</span>
               </div>
             </div>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-muted-brand hover:text-accent transition-colors w-fit"
-            >
-              <FaWhatsapp className="shrink-0 text-accent2" size={14} />
-              +52 329 296 5459
-            </a>
+          </div>
+
+          {/* Ventas */}
+          <div className="flex flex-col gap-4">
+            <span className="text-accent text-xs tracking-widest uppercase">Ventas</span>
+            <div className="flex flex-col gap-2">
+              {whatsappContacts.map(({ name, phone }) => (
+                <a
+                  key={name}
+                  href={`https://wa.me/${phone}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-muted-brand hover:text-accent transition-colors w-fit"
+                >
+                  <FaWhatsapp className="shrink-0 text-accent2" size={14} />
+                  Ventas - {name}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Contacto */}

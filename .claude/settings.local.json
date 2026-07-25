@@ -68,7 +68,10 @@
       "mcp__playwright__browser_resize",
       "Bash(rm \"app/api/wedding/categories/route.ts\")",
       "Bash(rmdir \"app/api/wedding/categories\")",
-      "Bash(git check-ignore *)"
+      "Bash(git check-ignore *)",
+      "Bash(openssl s_client -connect grupochalitabahia.com:443 -servername grupochalitabahia.com)",
+      "Bash(openssl x509 *)",
+      "Bash(curl -v https://grupochalitabahia.com --max-time 15 -o /dev/null)"
     ]
   }
 }
